@@ -1,0 +1,66 @@
+<ion-side-menus enable-menu-with-back-views="true">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+
+        <ion-content>
+            <div style=" position: absolute; top: 0px;z-index: 999;width: 100%; top: 145px;color: #fff;">
+                <p style="font-size: 22px;    margin-left: 10px; ">{{content.name}}</p>
+                <p style="font-size: 11px;    margin-left: 10px;">{{content.email}}</p>
+                <img ng-src="img/locations/shadow.png" class="slider_bottom_shadow" style="width: 100%;opacity: 0.5;">
+            </div>
+            <a href="#/app/profile" >
+                <!--                <div style="background-image: url('img/profile/profile_bg.jpg');height: 170px;color: #fff;text-decoration: none;position: relative;">
+                                    
+                                   
+                                </div>-->
+                <img menu-toggle="left"  src="img/profile/profile_bg.jpg" style="width: 100%;margin: auto;display: block">
+            </a>
+            <ion-list>
+                <ion-item menu-close href="#/app/home">
+                    <div style="color: #00B58A;float: left;margin-right: 20px"><i class="icon ion-ios-home"></i></div>
+                    Home
+                </ion-item>
+                <ion-item menu-close href="#/app/my_favorites"> 
+                    <div style="color: #00B58A;float: left;margin-right: 20px;"><i class="icon ion-star"></i></div>
+                    My Favorites
+                </ion-item>
+                <ion-item menu-close href="#/app/my_interest">
+                    <div style="color: #00B58A;float: left;margin-right: 20px"><i class="icon ion-thumbsup"></i></div>
+                    My interest
+                </ion-item>
+                <ion-item menu-close href="#/app/my_location">
+                    <div style="color: #00B58A;float: left;margin-right: 20px"><i class="icon ion-ios-location"></i></div>
+                    My Location
+                </ion-item>
+                <ion-item menu-close href="#/app/my_footprints">
+                    <div style="color: #00B58A;float: left;margin-right: 20px"><i class="icon ion-ios-location"></i></div>
+                    My Footprints
+                </ion-item>
+                <ion-item menu-close href="#/app/friends">
+                    <div style="color: #00B58A;float: left;margin-right: 20px"><i class="icon ion-ios-people"></i></div>
+                    My Friends
+                </ion-item>
+                <ion-item menu-close href="#/app/location_inbox">
+                    <div style="color: #00B58A;float: left;margin-right: 20px"><i class="icon ion-email"></i></div>
+                    Location Inbox
+                </ion-item>
+                <ion-item menu-close ng-click="logout()">
+                    <div style="color: #00B58A;float: left;margin-right: 20px"><i class="icon ion-log-out"></i></div>
+                    Logout
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

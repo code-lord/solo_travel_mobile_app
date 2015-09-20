@@ -1,0 +1,40 @@
+<ion-view hide-nav-bar="true">
+
+    <ion-header-bar class="header_back">
+        <div style="width: 5%;float: left">
+            <button ng-click="$ionicGoBack()"  class="button back-button buttons  button-clear header-item">
+                <div style="color: white"><i class="icon ion-android-arrow-back"></i></div>
+            </button>
+        </div>
+        <div style="text-align: center;font-size: 18px;color: white;width: 85%;margin-top: 8px;font-size: 25px">
+            Sign In
+        </div>
+    </ion-header-bar>
+
+    <ion-content class="padding">
+
+        <input type="text" ng-model="content.name" placeholder="Name" id="inputsolo"><br>
+
+        <input type="text" ng-model="content.username" placeholder="Username" id="inputsolo"><br>
+
+        <input type="number" ng-model="content.phone" placeholder="Phone" id="inputsolo"><br>
+
+        <input type="email" ng-model="content.email" placeholder="Email ID" id="inputsolo"><br>
+
+        <input type="date" ng-model="content.dob" placeholder="Birth Date" id="inputsolo"><br>
+
+        <input type="password" ng-model="content.password" placeholder="Password" id="inputsolo"><br>
+
+        <input type="password" ng-model="content.pass_conf" placeholder="Confirm Password" id="inputsolo"><br>
+
+        <div class="padding">
+            <button class="button" ng-click="signup()" style="display: block;margin: auto;background-color: #00B58A;color: white;font-size: 18px;margin-top: 30px;width: 50%">
+                Sign In
+            </button>
+
+
+        </div>
+
+    </ion-content>
+
+</ion-view>

@@ -1,0 +1,28 @@
+<ion-modal-view hide-nav-bar="true">
+    <div class="modal">
+        <ion-header-bar class="header_back">
+            <div style="width: 5%;float: left">
+                <button ng-click="add_interest_modal.hide()" class="button back-button buttons  button-clear header-item">
+                    <div style="color: white"><i class="icon ion-close-round"></i></div>
+                </button>
+            </div>
+            <div style="text-align: center;font-size: 18px;color: white;width: 85%;margin-top: 8px;font-size: 25px">
+                Add Interest
+            </div>
+        </ion-header-bar>
+        <ion-content class="padding">
+            <div class="list">
+                <ion-checkbox ng-repeat="item in items"
+                              ng-model="item.checked" 
+                              ng-checked="item.checked">
+                    {{ item.interest}}
+                </ion-checkbox>
+            </div>
+        </ion-content>
+        <ion-footer-bar class="header_back">
+            <button ng-click="saveinterest()" class="button" style="display: block;margin: auto;/* background-color: #00B58A; *//* color: white; */font-size: 18px;/* margin-top: 30px; */width: 50%">
+                Done
+            </button>
+        </ion-footer-bar>
+    </div>
+</ion-modal-view>

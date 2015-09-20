@@ -1,0 +1,25 @@
+<ion-modal-view hide-nav-bar="true">
+    <div class="modal">
+        <ion-header-bar class="header_back">
+            <div style="width: 5%;float: left">
+                <button ng-click="friends_modal.hide()" class="button back-button buttons  button-clear header-item">
+                    <div style="color: white"><i class="icon ion-close-round"></i></div>
+                </button>
+            </div>
+            <div style="text-align: center;font-size: 18px;color: white;width: 85%;margin-top: 8px;font-size: 25px">
+                Location Footprint
+            </div>
+        </ion-header-bar>
+        <ion-content>
+            <ion-list >
+                <ion-item  ng-repeat="friend in friends" class="back item-avatar">
+                    <img src="img/View_friends.png" style="width: 100%">
+                    <h3>{{friend.name}}</h3>
+                    <h4>{{friend.email}}</h4>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </div>
+</ion-modal-view>
+
+

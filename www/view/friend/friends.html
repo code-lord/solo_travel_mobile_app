@@ -1,0 +1,30 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar class="header_back">
+        <div  menu-toggle="left"  style="width: 5%;float: left">
+            <button class="button back-button buttons  button-clear header-item">
+                <div style="color: white"><i class="icon ion-android-menu"></i></div>
+            </button>
+        </div>
+        <div style="text-align: center;font-size: 18px;color: white;width: 85%;margin-top: 8px;font-size: 25px">
+            Friends
+        </div>
+        <a href="#/app/add_friends">
+            <div style="width: 5%;float: left;margin-left: 10px">
+                <button class="button back-button buttons  button-clear header-item">
+                    <div style="color: white"><i class="icon ion-plus-round"></i></div>
+                </button>
+            </div></a>
+    </ion-header-bar>
+    <ion-content>
+        <ion-list >
+            <ion-item  ng-repeat="friend in friends" class="back item-avatar" href="#/app/friends_info/{{friend.id}}">
+                <img src="img/View_friends.png" style="width: 100%">
+                <h3>{{friend.name}}</h3>
+                <h4>{{friend.email}}</h4>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+</ion-view>
+
+

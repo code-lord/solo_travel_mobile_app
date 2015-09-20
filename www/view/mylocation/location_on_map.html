@@ -1,0 +1,25 @@
+<ion-modal-view hide-nav-bar="true">
+    <div class="modal">
+        <ion-header-bar class="header_back">
+            <div style="width: 5%;float: left">
+                <button ng-click="location_on_map.hide()" class="button back-button buttons  button-clear header-item">
+                    <div style="color: white"><i class="icon ion-close-round"></i></div>
+                </button>
+            </div>
+            <div style="text-align: center;font-size: 18px;color: white;width: 85%;margin-top: 8px;font-size: 25px">
+                Pick Location
+            </div>
+        </ion-header-bar>
+        <ion-content class="scroll-content ionic-scroll  has-header">
+            <div class="list">
+                <div>
+                    <map on-create="mapCreated(map)" id="map_canvas" style="height: 340px;"></map>
+                </div>
+                <label class="item item-button">
+                    <button class="button button-positive" ng-click="location_on_map.hide();">Select Location</button>
+                </label>
+            </div>
+        </ion-content>
+    </div>
+</ion-modal-view>
+

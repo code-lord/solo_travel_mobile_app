@@ -1,0 +1,60 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar class="header_back">
+        <div style="width: 5%;float: left">
+            <button ng-click="$ionicGoBack()"  class="button back-button buttons  button-clear header-item">
+                <div style="color: white"><i class="icon ion-android-arrow-back"></i></div>
+            </button>
+        </div>
+        <div style="text-align: center;font-size: 18px;color: white;width: 95%;margin-top: 8px;font-size: 25px">
+            Location Details
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div style="position: relative;">
+            <img ng-src="img/locations/shadow.png" class="slider_bottom_shadow">
+            <img ng-src="{{content.location_details.cover_photo_url}}"  style="width: 100%;margin: auto;display: block">
+            <div style=" position: absolute; z-index: 99; color: #fff; bottom: 0px; left: 16px;">
+                <h3 style="color: #fff;">{{content.location_details.name}}</h3>
+                <p>{{content.location_details.description}}</p>
+            </div>
+        </div>
+        <ion-list>
+            <div ng-if="!content.location_details.footprint">
+                <ion-item class="header_back" ng-click="showAddFootPrintConfirm()">
+                    <div style="font-size: 18px;text-align: center;color: white">Add Footprint</div>
+                </ion-item>
+            </div>
+            <div ng-if="content.location_details.footprint">
+                <ion-item class="header_back" ng-click="showRemoveFootPrintConfirm()">
+                    <div style="font-size: 18px;text-align: center;color: white">Remove Footprint</div>
+                </ion-item>
+            </div>
+
+            <ion-item ng-click="showRating()">
+                <div style="font-size: 18px;text-align: center;">Rate Locations</div>
+            </ion-item>
+            <ion-item class="header_back" ng-click="share_location_modal.show()">
+                <div style="font-size: 18px;text-align: center;color: white">Share Location</div>
+            </ion-item>
+            <div ng-if="!content.location_details.favorite">
+                <ion-item ng-click="showAddFavoriteConfirm()">
+                    <div style="font-size: 18px;text-align: center;">Add Favorite</div>
+                </ion-item>
+            </div>
+            <div ng-if="content.location_details.favorite">
+                <ion-item ng-click="showRemoveFavoriteConfirm()">
+                    <div style="font-size: 18px;text-align: center;">Remove Favorite</div>
+                </ion-item>
+            </div>
+            <ion-item class="header_back" ng-click="map_show()">
+                <div style="font-size: 18px;text-align: center;color: white;">View on Map</div>
+            </ion-item>
+            <ion-item ng-click="friends_modal.show()">
+                <div style="font-size: 18px;text-align: center;">Location Footprints</div>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-view>
+
+

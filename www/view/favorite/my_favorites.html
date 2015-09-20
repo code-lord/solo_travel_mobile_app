@@ -1,0 +1,32 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar class="header_back">
+        <div  menu-toggle="left"  style="width: 5%;float: left">
+            <button class="button back-button buttons  button-clear header-item">
+                <div style="color: white"><i class="icon ion-android-menu"></i></div>
+            </button>
+        </div>
+        <div style="text-align: center;font-size: 18px;color: white;width: 85%;margin-top: 8px;font-size: 25px">
+            My Favorites 
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <ion-list>
+            <ion-item  ng-repeat="location in locations"  class="item item-thumbnail-left" href="#/app/location_details/{{location.id}}" style="text-decoration: none">
+                <img src="{{location.cover_photo_url}}" style="width: 100%;">
+                <h2 style="white-space: normal">{{location.name}}</h2>
+                <p style="font-size: 12px">{{location.description}}</p>
+                <div style=" font-size: 26px; margin-top: 10px; ">
+                    <div ng-init="rating = location.rating"></div>
+                    <div class="star-rating" star-rating rating-value="rating" data-max="5" on-rating-selected="rateFunction(rating)"></div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+    <ion-footer-bar class="header_back">
+        <a href="#/app/map_view" style="text-decoration: none">  
+            <div class="title" style="font-size: 20px;color: white">View On Map</div> 
+        </a>
+    </ion-footer-bar>
+
+</ion-view>

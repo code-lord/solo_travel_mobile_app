@@ -1,0 +1,36 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar class="header_back">
+        <div  menu-toggle="left"  style="width: 5%;float: left">
+            <button class="button back-button buttons  button-clear header-item">
+                <div style="color: white"><i class="icon ion-android-menu"></i></div>
+            </button>
+        </div>
+        <div style="text-align: center;font-size: 18px;color: white;width: 85%;margin-top: 8px;font-size: 25px">
+            Profile
+        </div>
+    </ion-header-bar>
+    <ion-content class="back">
+        <div style=" position: absolute; top: 0px;z-index: 999;width: 100%; top: 227px;color: #fff;">
+            <p style="font-size: 22px;    margin-left: 10px; ">{{content.name}}</p>
+            <p style="font-size: 11px;    margin-left: 10px;">{{content.email}}</p>
+            <img ng-src="img/locations/shadow.png" class="slider_bottom_shadow" style="width: 100%;opacity: 0.5;">
+        </div>
+        <img src="img/profile/profile_bg.jpg" style="width: 100%;margin: auto;display: block">
+        <ion-list >
+            <ion-item class="back">
+                <div style="font-size: 12px;">Name:</div>
+                <div style="font-size: 18px;">{{content.name}}</div>
+            </ion-item>
+            <ion-item class="back">
+                <div style="font-size: 12px;">Phone:</div>
+                <div style="font-size: 18px;">{{content.phone}}</div>
+            </ion-item>
+            <ion-item class="back">
+                <div style="font-size: 12px;">Email:</div>
+                <div style="font-size: 18px;">{{content.email}}</div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+
+

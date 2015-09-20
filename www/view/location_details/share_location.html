@@ -1,0 +1,28 @@
+<ion-modal-view hide-nav-bar="true">
+    <div class="modal">
+        <ion-header-bar class="header_back">
+            <div style="width: 5%;float: left">
+                <button ng-click="share_location_modal.hide()" class="button back-button buttons  button-clear header-item">
+                    <div style="color: white"><i class="icon ion-close-round"></i></div>
+                </button>
+            </div>
+            <div style="text-align: center;font-size: 18px;color: white;width: 85%;margin-top: 8px;font-size: 25px">
+                Share Location
+            </div>
+        </ion-header-bar>
+        <ion-content class="padding">
+            <div class="list" style="height: 80%">
+                <ion-radio ng-repeat="item in items"
+                           ng-value="item.id"
+                           ng-model="content.id" >
+                    {{ item.name}}
+                </ion-radio>
+            </div>
+            <div class="padding" style="height: 20%">
+                <button ng-click="sharelocation()" class="button" style="display: block;margin: auto;background-color: #00B58A;color: white;font-size: 18px;margin-top: 30px;width: 50%">
+                    Done
+                </button>
+            </div>
+        </ion-content>
+    </div>
+</ion-modal-view>

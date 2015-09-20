@@ -1,0 +1,30 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar class="header_back">
+        <div style="width: 5%;float: left">
+            <button ng-click="$ionicGoBack()" class="button back-button buttons  button-clear header-item">
+                <div style="color: white"><i class="icon ion-android-arrow-back"></i></div>
+            </button>
+        </div>
+        <div style="text-align: center;font-size: 18px;color: white;width: 80%;margin-top: 8px;font-size: 25px">
+            Friends Info
+        </div>
+    </ion-header-bar>
+    <ion-content  class="padding">
+        <ion-list >
+            <ion-item class="back item-thumbnail-left">
+                <img src="img/View_friends.png" style="width: 50%">
+                <div style="font-size: 12px;">Name:</div>
+                <div style="font-size: 18px;">{{content.friend.name}}</div>
+                <div style="font-size: 12px;">Username:</div>
+                <div style="font-size: 18px;">{{content.friend.username}}</div>
+                <div style="font-size: 12px;">Phone:</div>
+                <div style="font-size: 18px;">{{content.friend.phone}}</div>
+                <div style="font-size: 12px;">Email:</div>
+                <div style="font-size: 18px;">{{content.friend.email}}</div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+</ion-view>
+
+

@@ -1,0 +1,32 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar class="header_back">
+        <div style="width: 5%;float: left">
+            <button ng-click="$ionicGoBack()"  class="button back-button buttons  button-clear header-item">
+                <div style="color: white"><i class="icon ion-android-arrow-back"></i></div>
+            </button>
+        </div>
+        <div style="text-align: center;font-size: 18px;color: white;width: 85%;margin-top: 8px;font-size: 25px">
+            Add Friends
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input type="search"  ng-model="content.name"  placeholder="Search">
+            </label>
+            <button class="button button-clear"  ng-click="searchbyname()">
+                Search
+            </button>
+        </div>
+        <ion-list >
+            <ion-item  ng-repeat="friend in friends" class="back item-avatar" ng-click="showConfirmFriend(friend.id)" >
+                <img src="img/View_friends.png" style="width: 100%">
+                <h3>{{friend.name}}</h3>
+                <h4>{{friend.email}}</h4>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+
+</ion-view>

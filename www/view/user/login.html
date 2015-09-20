@@ -1,0 +1,35 @@
+<ion-view hide-nav-bar="true">
+
+    <ion-content class="back" drag-content="false">
+
+        <img src="img/Login_logo.png" style="width: 40%;height: 40%;display: block;margin: auto;margin-top: 20%">
+        <div style="display: block;margin: auto;margin-top: 20px;padding-left: 30px;padding-right: 30px">
+            <input type="text" placeholder="Username" ng-model="content.username" id="login_input">
+        </div>
+        <br>
+        <div style="display: block;margin: auto;padding-left: 30px;padding-right: 30px">
+            <input type="text" placeholder="Password" ng-model="content.password"  id="login_input">
+        </div>
+
+        <div class="padding">
+            <br>
+            <button ng-click="login()" class="button" style="display: block;margin: auto;background-color: #00B58A;color: white;font-size: 18px;margin-top: 10px;width: 50%">
+                Login
+            </button>
+            <br>
+
+            <a href="#/app/forgot_password" style="text-decoration: none;font-weight: bold;text-align: center;color: #00B58A">
+
+                <p style="margin-top: 10px;">Forgot Password</p>
+            </a>
+
+            <a href="#/app/sign_up" style="text-decoration: none;font-weight: bold;text-align: center;color: #00B58A">
+
+                <p style="margin-top: 20px;">Sign Up</p>
+
+            </a>
+        </div>
+
+    </ion-content>
+
+</ion-view>

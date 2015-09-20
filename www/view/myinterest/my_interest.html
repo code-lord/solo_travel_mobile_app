@@ -1,0 +1,27 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar class="header_back">
+        <div  menu-toggle="left"  style="width: 5%;float: left">
+            <button class="button back-button buttons  button-clear header-item">
+                <div style="color: white"><i class="icon ion-android-menu"></i></div>
+            </button>
+        </div>
+        <div style="text-align: center;font-size: 18px;color: white;width: 85%;margin-top: 8px;font-size: 25px">
+            My Interest
+        </div>
+        <div ng-click="add_interest_modal.show()" style="width: 5%;float: left;margin-left: 10px">
+            <button   class="button back-button buttons  button-clear header-item">
+                <div style="color: white"><i class="icon ion-plus-round"></i></div>
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <ion-list >
+            <ion-item ng-repeat="interest in interests" class="item" href="#/app/single_interest_location/{{interest.id}}">
+                <div style="color: #00B58A;float: left;margin-right: 30px"><i class="icon ion-ios-star"></i></div>
+                <div style="font-size: 18px;">{{interest.interest}}</div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+
+
